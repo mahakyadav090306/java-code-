@@ -126,3 +126,39 @@ public class LoopTest {
 Output :
 
 <img width="598" height="548" alt="Screenshot 2026-04-24 163319" src="https://github.com/user-attachments/assets/e80dca2c-c12b-4ec1-8cc3-a4210c348bbf" />
+
+# x
+                                                PROGRAM-3
+
+                                                
+import java.util.Scanner;
+
+public class GradeCalculator {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter your marks: ");
+        int marks = sc.nextInt();
+
+        if (marks >= 90) {
+            System.out.println("Grade: A");
+        } else if (marks >= 75) {
+            System.out.println("Grade: B");
+        } else if (marks >= 60) {
+            System.out.println("Grade: C");
+        } else if (marks >= 40) {
+            System.out.println("Grade: D");
+        } else {
+            System.out.println("Grade: Fail");
+        }
+
+        sc.close();
+    }
+}
+
+
+Output:
+
+<img width="292" height="79" alt="Screenshot 2026-04-24 163610" src="https://github.com/user-attachments/assets/a6457b4d-454c-46a4-9ad0-e56e0ab8d02c" />
+
