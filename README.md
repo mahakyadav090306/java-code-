@@ -166,7 +166,7 @@ Output:
 # y
 
                                               PROGRAM-4
-
+```
 import java.util.Scanner;
 
 class StarPatterns {
@@ -216,7 +216,60 @@ class StarPatterns {
         sc.close();
     }
 }
-
+```
 
 Output:
 <img width="441" height="536" alt="Screenshot 2026-04-24 164211" src="https://github.com/user-attachments/assets/710a7487-e5d1-4e1c-82ef-5eec21cad28a" />
+
+# z
+                                                Program-5
+```
+import java.util.Scanner;
+
+class Distance {
+    int meter;
+    int cm;
+
+    void input(int m, int c) {
+        meter = m;
+        cm = c;
+    }
+
+    Distance add(Distance d2) {
+        Distance result = new Distance();
+        result.cm = this.cm + d2.cm;
+        result.meter = this.meter + d2.meter + (result.cm / 100);
+        result.cm = result.cm % 100;
+        return result;
+    }
+
+    void display() {
+        System.out.println(meter + " m " + cm + " cm");
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Distance d1 = new Distance();
+        Distance d2 = new Distance();
+
+        int m1 = sc.nextInt();
+        int c1 = sc.nextInt();
+        int m2 = sc.nextInt();
+        int c2 = sc.nextInt();
+
+        d1.input(m1, c1);
+        d2.input(m2, c2);
+
+        Distance result = d1.add(d2);
+
+        result.display();
+
+        sc.close();
+    }
+}
+```
+              
+Output:
+
+<img width="633" height="210" alt="Screenshot 2026-04-24 173759" src="https://github.com/user-attachments/assets/a134b0b7-3c1e-46b5-8b7f-cecc7c93326f" />
