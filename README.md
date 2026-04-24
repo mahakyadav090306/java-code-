@@ -90,3 +90,39 @@ class Calculator {
 Output:
 
 <img width="610" height="163" alt="Screenshot 2026-04-24 162014" src="https://github.com/user-attachments/assets/3dfafee8-d80d-4630-aefe-9d7116674142" />
+
+# abc
+
+                                                 PROGRAM-2
+
+ ```                                                
+public class LoopTest {
+
+    public static void main(String[] args) {
+
+        System.out.println("Using FOR loop:");
+        for(int i = 1; i <= 5; i++) {
+            System.out.println(i);
+        }
+
+        System.out.println("\nUsing WHILE loop:");
+        int j = 1;
+        while(j <= 5) {
+            System.out.println(j);
+            j++;
+        }
+
+        System.out.println("\nUsing DO-WHILE loop:");
+        int k = 1;
+        do {
+            System.out.println(k);
+            k++;
+        } while(k <= 5);
+
+    }
+}
+```
+
+Output :
+
+<img width="598" height="548" alt="Screenshot 2026-04-24 163319" src="https://github.com/user-attachments/assets/e80dca2c-c12b-4ec1-8cc3-a4210c348bbf" />
