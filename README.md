@@ -162,3 +162,61 @@ Output:
 
 <img width="292" height="79" alt="Screenshot 2026-04-24 163610" src="https://github.com/user-attachments/assets/a6457b4d-454c-46a4-9ad0-e56e0ab8d02c" />
 
+
+# y
+
+                                              PROGRAM-4
+
+import java.util.Scanner;
+
+class StarPatterns {
+
+    // Method for square of stars
+    void square(int rows, int cols) {
+        System.out.println("\nSquare Pattern:");
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= cols; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    // Method for triangle of stars
+    void triangle(int n) {
+        System.out.println("\nTriangle Pattern:");
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        StarPatterns sp = new StarPatterns();
+
+        // Input for square
+        System.out.print("Enter number of rows for square: ");
+        int rows = sc.nextInt();
+
+        System.out.print("Enter number of columns for square: ");
+        int cols = sc.nextInt();
+
+        // Input for triangle
+        System.out.print("Enter height of triangle: ");
+        int n = sc.nextInt();
+
+        // Calling methods
+        sp.square(rows, cols);
+        sp.triangle(n);
+
+        sc.close();
+    }
+}
+
+
+Output:
+<img width="441" height="536" alt="Screenshot 2026-04-24 164211" src="https://github.com/user-attachments/assets/710a7487-e5d1-4e1c-82ef-5eec21cad28a" />
