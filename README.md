@@ -449,3 +449,66 @@ class Time {
 Output:
 
 <img width="557" height="94" alt="Screenshot 2026-04-27 214806" src="https://github.com/user-attachments/assets/dfd8dcf9-48fa-404b-a24a-22d068e99556" />
+
+
+# d
+                                                  Program-9
+
+
+import java.util.Scanner;
+
+class ArrayOperations {
+    int[] arr;
+    int size;
+
+    void input() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter size of array: ");
+        size = sc.nextInt();
+        arr = new int[size];
+
+        System.out.println("Enter elements:");
+        for (int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
+        }
+    }
+
+    void output1() {
+        System.out.println("Array elements:");
+        for (int i = 0; i < size; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    void output2() {
+        System.out.println("Array using enhanced loop:");
+        for (int x : arr) {
+            System.out.print(x + " ");
+        }
+        System.out.println();
+    }
+
+    void reverse() {
+        System.out.println("Array in reverse:");
+        for (int i = size - 1; i >= 0; i--) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+}
+
+public class TestArray {
+    public static void main(String[] args) {
+        ArrayOperations obj = new ArrayOperations();
+
+        obj.input();
+        obj.output1();
+        obj.output2();
+        obj.reverse();
+    }
+}
+
+Output:
+
+<img width="612" height="430" alt="Screenshot 2026-04-27 215018" src="https://github.com/user-attachments/assets/6bc3af1e-4779-4260-9fff-4d5499f507ec" />
