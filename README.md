@@ -875,3 +875,86 @@ public class AddTwoNumbersSwing {
 Output:
 
 <img width="113" height="20" alt="Screenshot 2026-04-27 221727" src="https://github.com/user-attachments/assets/38291612-58c7-4309-ac7a-fe376690f07d" />
+
+# q
+                                                  Program-14
+
+
+import javax.swing.*;
+import java.awt.event.*;
+
+public class SwingCalculator {
+
+    public static void main(String[] args) {
+
+        JFrame frame = new JFrame("Calculator");
+        frame.setSize(400, 300);
+        frame.setLayout(null);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JTextField t1 = new JTextField();
+        t1.setBounds(50, 30, 120, 30);
+
+        JTextField t2 = new JTextField();
+        t2.setBounds(200, 30, 120, 30);
+
+        JButton add = new JButton("+");
+        add.setBounds(50, 80, 60, 30);
+
+        JButton sub = new JButton("-");
+        sub.setBounds(120, 80, 60, 30);
+
+        JButton mul = new JButton("*");
+        mul.setBounds(190, 80, 60, 30);
+
+        JButton div = new JButton("/");
+        div.setBounds(260, 80, 60, 30);
+
+        JLabel result = new JLabel("Result:");
+        result.setBounds(50, 150, 300, 30);
+
+        add.addActionListener((ActionEvent e) -> {
+            double a = Double.parseDouble(t1.getText());
+            double b = Double.parseDouble(t2.getText());
+            result.setText("Result: " + (a + b));
+        });
+
+        sub.addActionListener((ActionEvent e) -> {
+            double a = Double.parseDouble(t1.getText());
+            double b = Double.parseDouble(t2.getText());
+            result.setText("Result: " + (a - b));
+        });
+
+        mul.addActionListener((ActionEvent e) -> {
+            double a = Double.parseDouble(t1.getText());
+            double b = Double.parseDouble(t2.getText());
+            result.setText("Result: " + (a * b));
+        });
+
+        div.addActionListener((ActionEvent e) -> {
+            double a = Double.parseDouble(t1.getText());
+            double b = Double.parseDouble(t2.getText());
+            
+            if (b != 0)
+                result.setText("Result: " + (a / b));
+            else
+                result.setText("Cannot divide by zero");
+        });
+
+        frame.add(t1);
+        frame.add(t2);
+        frame.add(add);
+        frame.add(sub);
+        frame.add(mul);
+        frame.add(div);
+        frame.add(result);
+
+        frame.setVisible(true);
+    }
+}
+
+
+Output:
+<img width="163" height="37" alt="Screenshot 2026-04-27 224625" src="https://github.com/user-attachments/assets/32e49024-8272-4328-8b98-1c2caae9996e" />
+
+
