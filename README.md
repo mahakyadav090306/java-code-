@@ -1510,6 +1510,67 @@ Output:
 
 <img width="543" height="48" alt="image" src="https://github.com/user-attachments/assets/c8190046-9f7a-495d-8591-5486ee1ec75e" />
 
+# g
+                                                  Program-22
+
+//Character-by-Character
+
+import java.io.*;
+
+public class CharFileCopy {
+    public static void main(String[] args) {
+        try {
+            FileReader fr = new FileReader("source.txt");
+            FileWriter fw = new FileWriter("dest_char.txt");
+
+            int ch;
+
+            while ((ch = fr.read()) != -1) {
+                fw.write(ch);
+            }
+
+            fr.close();
+            fw.close();
+
+            System. out.println("File copied using character stream");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+
+//Byte-by-Byte
+
+import java.io.*;
+
+public class ByteFileCopy {
+    public static void main(String[] args) {
+        try {
+            FileInputStream fis = new FileInputStream("source.txt");
+            FileOutputStream fos = new FileOutputStream("dest_byte.txt");
+
+            int b;
+
+            while ((b = fis.read()) != -1) {
+                fos.write(b);
+            }
+
+            fis.close();
+            fos.close();
+
+            System. out.println("File copied using byte stream");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+
+
+Output:
+
+<img width="401" height="87" alt="Screenshot 2026-04-28 000942" src="https://github.com/user-attachments/assets/f3089ba1-530a-40ff-b3e9-a0dc8f7ca235" />
+
+
 
 
 
