@@ -1059,5 +1059,130 @@ Output:
 
 <img width="249" height="37" alt="Screenshot 2026-04-27 225232" src="https://github.com/user-attachments/assets/3b575217-f508-47fd-bbff-aad6fd786157" />
 
+# s
+                                                  Program-16
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class ShapeDrawer extends JFrame implements ActionListener {
+
+    private DrawPanel panel;
+
+    public ShapeDrawer() {
+        setTitle("Shape Drawer");
+        setSize(800, 600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new BorderLayout());
+
+        // Drawing panel
+        panel = new DrawPanel();
+        add(panel, BorderLayout.CENTER);
+
+        // Button panel
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new GridLayout(2, 5, 5, 5));
+
+        String[] buttons = {
+                "Circle", "Oval", "Rectangle", "Square", "Line",
+                "Triangle", "Arc", "RoundRect", "Polygon", "Star"
+        };
+
+        for (String text : buttons) {
+            JButton btn = new JButton(text);
+            btn.addActionListener(this);
+            buttonPanel.add(btn);
+        }
+
+        add(buttonPanel, BorderLayout.SOUTH);
+
+        setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        panel.setShape(e.getActionCommand());
+    }
+
+    // Drawing Panel
+    class DrawPanel extends JPanel {
+
+        private String shape = "";
+
+        public void setShape(String shape) {
+            this.shape = shape;
+            repaint();
+        }
+
+        @Override
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+
+            g.setColor(Color.BLUE);
+
+            switch (shape) {
+
+                case "Circle":
+                    g.drawOval(300, 100, 150, 150);
+                    break;
+
+                case "Oval":
+                    g.drawOval(250, 120, 200, 120);
+                    break;
+
+                case "Rectangle":
+                    g.drawRect(250, 100, 200, 120);
+                    break;
+
+                case "Square":
+                    g.drawRect(300, 120, 150, 150);
+                    break;
+
+                case "Line":
+                    g.drawLine(200, 200, 500, 200);
+                    break;
+
+                case "Triangle":
+                    int[] tx = {300, 200, 400};
+                    int[] ty = {100, 250, 250};
+                    g.drawPolygon(tx, ty, 3);
+                    break;
+
+                case "Arc":
+                    g.drawArc(250, 100, 200, 150, 0, 180);
+                    break;
+
+                case "RoundRect":
+                    g.drawRoundRect(250, 120, 200, 120, 50, 50);
+                    break;
+
+                case "Polygon":
+                    int[] px = {250, 300, 350, 400, 350, 300};
+                    int[] py = {150, 100, 100, 150, 200, 200};
+                    g.drawPolygon(px, py, 6);
+                    break;
+
+                case "Star":
+                    int[] sx = {350, 370, 420, 380, 400, 350, 300, 320, 280, 330};
+                    int[] sy = {100, 150, 150, 180, 230, 200, 230, 180, 150, 150};
+                    g.drawPolygon(sx, sy, 10);
+                    break;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        new ShapeDrawer();
+    }
+}
+
+
+Output:
+
+<img width="679" height="487" alt="Screenshot 2026-04-27 231037" src="https://github.com/user-attachments/assets/dd2ba925-94af-40bc-a02d-b6b7962fbebd" />
+
+
+
 
 
