@@ -1571,6 +1571,46 @@ Output:
 <img width="401" height="87" alt="Screenshot 2026-04-28 000942" src="https://github.com/user-attachments/assets/f3089ba1-530a-40ff-b3e9-a0dc8f7ca235" />
 
 
+# h
+                                                  Program-23
+
+interface Printer {
+    void print();
+}
+
+abstract class Device {
+    abstract void start();
+
+    void stop() {
+        System.out.println("Device stopped");
+    }
+}
+
+class Computer extends Device implements Printer {
+    void start() {
+        System. out.println("Computer started");
+    }
+
+    public void print() {
+        System.out.println("Printing from computer");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Computer c = new Computer();
+        c.start();
+        c.print();
+        c.stop();
+    }
+}
+
+
+Output:
+
+<img width="364" height="72" alt="Screenshot 2026-04-28 001245" src="https://github.com/user-attachments/assets/896d167c-0a89-4694-8471-a3d51c2c6301" />
+
+
 
 
 
