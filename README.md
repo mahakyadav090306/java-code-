@@ -146,7 +146,7 @@ Output :
 # x
                                                 PROGRAM-3
 
-                                                
+ ```                                               
 import java.util.Scanner;
 
 public class GradeCalculator {
@@ -172,7 +172,7 @@ public class GradeCalculator {
         sc.close();
     }
 }
-
+```
 
 Output:
 
@@ -293,6 +293,7 @@ Output:
 # a
                                                    Program-6
 
+```
 import java.util.Scanner;
 
 class Distance {
@@ -345,7 +346,7 @@ class Distance {
         sc.close();
     }
 }
-
+```
 
 Output:
 
@@ -354,6 +355,7 @@ Output:
 # b
                                                  Program-7
 
+```
 import java.util.Scanner;
 
 class Time {
@@ -400,7 +402,7 @@ class Time {
         sc.close();
     }
 }
-
+```
 
 Output:
 
@@ -408,7 +410,7 @@ Output:
 
 # c
                                                   Program-8
-
+```
 import java.util.Scanner;
 
 class Time {
@@ -461,7 +463,7 @@ class Time {
         sc.close();
     }
 }
-
+```
 Output:
 
 <img width="557" height="94" alt="Screenshot 2026-04-27 214806" src="https://github.com/user-attachments/assets/dfd8dcf9-48fa-404b-a24a-22d068e99556" />
@@ -470,7 +472,7 @@ Output:
 # d
                                                   Program-9
 
-
+```
 import java.util.Scanner;
 
 class ArrayOperations {
@@ -524,7 +526,7 @@ public class TestArray {
         obj.reverse();
     }
 }
-
+```
 Output:
 
 <img width="612" height="430" alt="Screenshot 2026-04-27 215018" src="https://github.com/user-attachments/assets/6bc3af1e-4779-4260-9fff-4d5499f507ec" />
@@ -533,7 +535,7 @@ Output:
 # m
                                                       Program-10
 
-
+```
 import java.util.Scanner;
 
 class MatrixOperations {
@@ -630,7 +632,7 @@ public class TestMatrix {
         obj.sumDiagonal();
     }
 }
-
+```
 Output:
 
 <img width="385" height="632" alt="Screenshot 2026-04-27 215353" src="https://github.com/user-attachments/assets/3c980b76-85cb-4936-8b14-f133d3211ede" />
@@ -639,7 +641,7 @@ Output:
 # n
                                                   Program-11
 
-
+```
 //Without Thread (Sequential Execution)
 class PrintTask1 {
     void printNumbers() {
@@ -755,7 +757,7 @@ public class RunnableDemo {
     }
 }
 
-
+```
 Output:
 
 <p>
@@ -775,7 +777,7 @@ Output:
 
 # o
                                                   Program-12
-
+```
 
 class ThreadTask1 extends Thread {
     public void run() {
@@ -826,7 +828,7 @@ public class JoinDemo {
     }
 }
 
-
+```
 Output:
 
 <img width="362" height="635" alt="Screenshot 2026-04-27 221328" src="https://github.com/user-attachments/assets/0cfeef58-a5e5-46cb-8f48-a70c8cb433b0" />
@@ -834,7 +836,7 @@ Output:
 # p
                                                   Program-13
 
-
+```
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -886,7 +888,7 @@ public class AddTwoNumbersSwing {
         frame.setVisible(true);
     }
 }
-
+```
 
 Output:
 
@@ -895,7 +897,7 @@ Output:
 # q
                                                   Program-14
 
-
+```
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -969,13 +971,13 @@ public class SwingCalculator {
     }
 }
 
-
+```
 Output:
 <img width="163" height="37" alt="Screenshot 2026-04-27 224625" src="https://github.com/user-attachments/assets/32e49024-8272-4328-8b98-1c2caae9996e" />
 
 # r
                                                   Program-15
-
+```
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -1070,14 +1072,14 @@ public class MatrixAdditionSwing {
     }
 }
 
-
+```
 Output:
 
 <img width="249" height="37" alt="Screenshot 2026-04-27 225232" src="https://github.com/user-attachments/assets/3b575217-f508-47fd-bbff-aad6fd786157" />
 
 # s
                                                   Program-16
-
+```
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -1192,7 +1194,7 @@ public class ShapeDrawer extends JFrame implements ActionListener {
         new ShapeDrawer();
     }
 }
-
+```
 
 Output:
 
@@ -1200,7 +1202,7 @@ Output:
 
 # t
                                                   Program-17
-
+```
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -1316,7 +1318,7 @@ public class PaintBrush extends JFrame {
         new PaintBrush();
     }
 }
-
+```
 
 Output:
 
@@ -1324,7 +1326,7 @@ Output:
 
 # v
                                                   Program-18
-
+```
 package mypack;
 
 public class Add {
@@ -1381,7 +1383,7 @@ public class Main {
     }
 }
 
-
+```
 
 Output:
 
@@ -1390,7 +1392,7 @@ Output:
 
 # w
                                                   Program-19
-
+```
 package mypack;
 
 public class Add {
@@ -1421,14 +1423,14 @@ public class Main {
     }
 }
 
-
+```
 Output:
 
 <img width="183" height="59" alt="Screenshot 2026-04-27 235853" src="https://github.com/user-attachments/assets/d823e04c-07c1-454e-911e-9f198e1bd644" />
 
 # e
                                                   Program-20
-
+```
 public class Main {
     public static void main(String[] args) {
 
@@ -1467,14 +1469,14 @@ public class Main {
     }
 }
 
-
+```
 Output:
 
 <img width="586" height="299" alt="Screenshot 2026-04-28 000128" src="https://github.com/user-attachments/assets/af554a66-398b-4d87-97ee-9a24a83a7a27" />
 
 # f
                                                   Program-21
-
+```
 class InvalidAgeException extends Exception {
     public InvalidAgeException(String message) {
         super(message);
@@ -1505,14 +1507,14 @@ public class Main {
     }
 }
 
-
+```
 Output:
 
 <img width="543" height="48" alt="image" src="https://github.com/user-attachments/assets/c8190046-9f7a-495d-8591-5486ee1ec75e" />
 
 # g
                                                   Program-22
-
+```
 //Character-by-Character
 
 import java.io.*;
@@ -1565,7 +1567,7 @@ public class ByteFileCopy {
     }
 }
 
-
+```
 Output:
 
 <img width="401" height="87" alt="Screenshot 2026-04-28 000942" src="https://github.com/user-attachments/assets/f3089ba1-530a-40ff-b3e9-a0dc8f7ca235" />
@@ -1573,7 +1575,7 @@ Output:
 
 # h
                                                   Program-23
-
+```
 interface Printer {
     void print();
 }
@@ -1605,14 +1607,14 @@ public class Main {
     }
 }
 
-
+```
 Output:
 
 <img width="364" height="72" alt="Screenshot 2026-04-28 001245" src="https://github.com/user-attachments/assets/896d167c-0a89-4694-8471-a3d51c2c6301" />
 
 # i
                                                   Program-24
-
+```
 import javax.swing.*;
 import java.awt.event.*;
 import java.sql.*;
@@ -1807,14 +1809,14 @@ public class Main extends JFrame implements ActionListener {
     }
 }
 
-
+```
 Output:
 
 <img width="385" height="497" alt="Screenshot 2026-04-28 001744" src="https://github.com/user-attachments/assets/54502618-0d41-462d-863c-d7ca8524f63a" />
 
 # j
                                                   Program-25
-
+```
 
 import java.util.Scanner;
 
@@ -1835,12 +1837,12 @@ class Factorial {
     }
 }
 
-
+```
 Output:
 
 <img width="298" height="52" alt="Screenshot 2026-04-28 002132" src="https://github.com/user-attachments/assets/f630b963-ecc5-41ac-9110-e7f318f76e44" />
 
-
+```
 import java.util.Scanner;
 
 class Armstrong {
@@ -1865,13 +1867,13 @@ class Armstrong {
             System.out.println("Not Armstrong Number");
     }
 }
-
+```
 
 Output:
 
 <img width="358" height="59" alt="Screenshot 2026-04-28 002534" src="https://github.com/user-attachments/assets/b4ed8902-f20f-4a92-b406-da0cb89b258d" />
 
-
+```
 
 import java.util.Scanner;
 
@@ -1899,11 +1901,11 @@ class Palindrome {
 }
 
 
-
+```
 Output:
 
 <img width="335" height="68" alt="Screenshot 2026-04-28 002810" src="https://github.com/user-attachments/assets/94faa8ee-e0a4-4bb1-931b-6ba0be0e2c23" />
-
+```
 import java.util.Scanner;
 
 class Fibonacci {
@@ -1926,7 +1928,7 @@ class Fibonacci {
 }
 
 
-
+```
 Output:
 
 <img width="441" height="66" alt="Screenshot 2026-04-28 003042" src="https://github.com/user-attachments/assets/59fb36db-3c25-4da7-b630-8d2992cd0839" />
@@ -1944,7 +1946,7 @@ class Pattern {
 }
 
 
-
+```
 Output:
 
 <img width="179" height="167" alt="Screenshot 2026-04-28 003309" src="https://github.com/user-attachments/assets/7431070f-174b-426c-b18f-8808268d2909" />
