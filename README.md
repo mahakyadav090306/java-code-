@@ -1812,6 +1812,146 @@ Output:
 
 <img width="385" height="497" alt="Screenshot 2026-04-28 001744" src="https://github.com/user-attachments/assets/54502618-0d41-462d-863c-d7ca8524f63a" />
 
+# j
+                                                  Program-25
+
+
+import java.util.Scanner;
+
+class Factorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n;
+        long fact = 1;
+
+        System.out.print("Enter a number: ");
+        n = sc.nextInt();
+
+        for(int i = 1; i <= n; i++) {
+            fact *= i;
+        }
+
+        System.out.println("Factorial = " + fact);
+    }
+}
+
+
+Output:
+
+<img width="298" height="52" alt="Screenshot 2026-04-28 002132" src="https://github.com/user-attachments/assets/f630b963-ecc5-41ac-9110-e7f318f76e44" />
+
+
+import java.util.Scanner;
+
+class Armstrong {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n, temp, remainder, sum = 0;
+
+        System.out.print("Enter a number: ");
+        n = sc.nextInt();
+
+        temp = n;
+
+        while(temp != 0) {
+            remainder = temp % 10;
+            sum += remainder * remainder * remainder;
+            temp /= 10;
+        }
+
+        if(sum == n)
+            System.out.println("Armstrong Number");
+        else
+            System.out.println("Not Armstrong Number");
+    }
+}
+
+
+Output:
+
+<img width="358" height="59" alt="Screenshot 2026-04-28 002534" src="https://github.com/user-attachments/assets/b4ed8902-f20f-4a92-b406-da0cb89b258d" />
+
+
+
+import java.util.Scanner;
+
+class Palindrome {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n, reverse = 0, remainder, temp;
+
+        System.out.print("Enter a number: ");
+        n = sc.nextInt();
+
+        temp = n;
+
+        while(temp != 0) {
+            remainder = temp % 10;
+            reverse = reverse * 10 + remainder;
+            temp /= 10;
+        }
+
+        if(reverse == n)
+            System.out.println("Palindrome Number");
+        else
+            System.out.println("Not Palindrome");
+    }
+}
+
+
+
+Output:
+
+<img width="335" height="68" alt="Screenshot 2026-04-28 002810" src="https://github.com/user-attachments/assets/94faa8ee-e0a4-4bb1-931b-6ba0be0e2c23" />
+
+import java.util.Scanner;
+
+class Fibonacci {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n, t1 = 0, t2 = 1, next;
+
+        System.out.print("Enter number of terms: ");
+        n = sc.nextInt();
+
+        System.out.print("Fibonacci Series: " + t1 + " " + t2 + " ");
+
+        for(int i = 3; i <= n; i++) {
+            next = t1 + t2;
+            System.out.print(next + " ");
+            t1 = t2;
+            t2 = next;
+        }
+    }
+}
+
+
+
+Output:
+
+<img width="441" height="66" alt="Screenshot 2026-04-28 003042" src="https://github.com/user-attachments/assets/59fb36db-3c25-4da7-b630-8d2992cd0839" />
+
+class Pattern {
+    public static void main(String[] args) {
+
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+Output:
+
+<img width="179" height="167" alt="Screenshot 2026-04-28 003309" src="https://github.com/user-attachments/assets/7431070f-174b-426c-b18f-8808268d2909" />
+
+
+
+
 
 
 
