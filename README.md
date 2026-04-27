@@ -33,6 +33,22 @@
 
 [PROGRAM-17:Just using mouse Event create a frame like paint brush with selection of colour and width .](#t)
 
+[PROGRAM-18:Create a package of any 5 classes of your choice and import it.](#v)
+
+[PROGRAM-19:Create one package and sub package import and test it .](#w)
+
+[PROGRAM-20:Create one small array of size 5 apply array out of bounds exception using try catch give a proper message in catch and demonstrate the exception exactly in the same fashion demonstrate arithmetic exception .](#e)
+
+[PROGRAM-21:To test the range of age of one student.write a program using user defined exception.](#f)
+
+[PROGRAM-22:File Handling Programs (given in the PPT).](#g) 
+
+[PROGRAM-23:Inheritance Programs, using interface and abstract classes.](#h)
+
+[PROGRAM-24:Make a registration form with 10 elements and send the data into database (use jdbc connectivity)](#i)
+
+[PROGRAM-25:Collect the code from internet for any five programs of c language. (Fact, armstrong, palindrome, Fibonacci, pattern).](#j)
+
 # xyz 
                                               PROGRAM-1
 ```                                              
@@ -1305,6 +1321,73 @@ public class PaintBrush extends JFrame {
 Output:
 
 <img width="631" height="527" alt="Screenshot 2026-04-27 232147" src="https://github.com/user-attachments/assets/fc404903-acb3-4b10-84c4-f04deef50cf3" />
+
+# v
+                                                  Program-18
+
+package mypack;
+
+public class Add {
+    public int sum(int a, int b) {
+        return a + b;
+    }
+}
+package mypack;
+
+public class Sub {
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+}
+package mypack;
+
+public class Mul {
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+}
+package mypack;
+
+public class Div {
+    public int divide(int a, int b) {
+        return a / b;
+    }
+}
+package mypack;
+
+public class Square {
+    public int square(int a) {
+        return a * a;
+    }
+}
+
+//Main Method
+
+import mypack.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Add a = new Add();
+        Sub s = new Sub();
+        Mul m = new Mul();
+        Div d = new Div();
+        Square sq = new Square();
+
+        System.out.println("Addition: " + a.sum(10, 5));
+        System.out.println("Subtraction: " + s.subtract(10, 5));
+        System.out.println("Multiplication: " + m.multiply(10, 5));
+        System.out.println("Division: " + d.divide(10, 5));
+        System.out.println("Square: " + sq.square(5));
+    }
+}
+
+
+
+Output:
+
+<img width="285" height="144" alt="Screenshot 2026-04-27 235615" src="https://github.com/user-attachments/assets/ddc3f670-83b7-4864-a4ec-fa7869433da9" />
+
+
 
 
 
