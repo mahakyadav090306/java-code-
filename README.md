@@ -334,3 +334,60 @@ class Distance {
 Output:
 
 <img width="302" height="124" alt="Screenshot 2026-04-27 213317" src="https://github.com/user-attachments/assets/033b0a7f-b73d-4af5-a8ce-fb449fd389d4" />
+
+# b
+                                                 Program-7
+
+import java.util.Scanner;
+
+class Time {
+    int hr, min;
+
+    void input(int h, int m) {
+        hr = h;
+        min = m;
+    }
+
+    Time add(Time t2) {
+        Time result = new Time();
+
+        result.min = this.min + t2.min;
+        result.hr = this.hr + t2.hr + (result.min / 60);
+        result.min = result.min % 60;
+
+        return result;
+    }
+
+    void display() {
+        System.out.println(hr + " hr " + min + " min");
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Time t1 = new Time();
+        Time t2 = new Time();
+
+        int h1 = sc.nextInt();
+        int m1 = sc.nextInt();
+
+        int h2 = sc.nextInt();
+        int m2 = sc.nextInt();
+
+        t1.input(h1, m1);
+        t2.input(h2, m2);
+
+        Time result = t1.add(t2);
+
+        result.display();
+
+        sc.close();
+    }
+}
+
+
+Output:
+
+<img width="322" height="95" alt="image" src="https://github.com/user-attachments/assets/2c5239d3-1a7b-4010-afd6-681690854321" />
+
+
