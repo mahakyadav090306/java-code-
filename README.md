@@ -814,3 +814,64 @@ public class JoinDemo {
 Output:
 
 <img width="362" height="635" alt="Screenshot 2026-04-27 221328" src="https://github.com/user-attachments/assets/0cfeef58-a5e5-46cb-8f48-a70c8cb433b0" />
+
+# p
+                                                  Program-13
+
+
+import javax.swing.*;
+import java.awt.event.*;
+
+public class AddTwoNumbersSwing {
+
+    public static void main(String[] args) {
+
+        JFrame frame = new JFrame("Add Two Numbers");
+        frame.setSize(400, 250);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(null);
+
+        JLabel l1 = new JLabel("Enter First Number:");
+        l1.setBounds(50, 30, 150, 25);
+
+        JLabel l2 = new JLabel("Enter Second Number:");
+        l2.setBounds(50, 70, 150, 25);
+
+        JLabel resultLabel = new JLabel("Result:");
+        resultLabel.setBounds(50, 150, 300, 25);
+
+        JTextField t1 = new JTextField();
+        t1.setBounds(200, 30, 120, 25);
+
+        JTextField t2 = new JTextField();
+        t2.setBounds(200, 70, 120, 25);
+
+        JButton addButton = new JButton("Add");
+        addButton.setBounds(150, 110, 80, 30);
+
+        addButton.addActionListener((ActionEvent e) -> {
+            try {
+                int num1 = Integer.parseInt(t1.getText());
+                int num2 = Integer.parseInt(t2.getText());
+                int sum = num1 + num2;
+                resultLabel.setText("Result: " + sum);
+            } catch (NumberFormatException ex) {
+                resultLabel.setText("Please enter valid numbers!");
+            }
+        });
+
+        frame.add(l1);
+        frame.add(l2);
+        frame.add(t1);
+        frame.add(t2);
+        frame.add(addButton);
+        frame.add(resultLabel);
+
+        frame.setVisible(true);
+    }
+}
+
+
+Output:
+
+<img width="113" height="20" alt="Screenshot 2026-04-27 221727" src="https://github.com/user-attachments/assets/38291612-58c7-4309-ac7a-fe376690f07d" />
