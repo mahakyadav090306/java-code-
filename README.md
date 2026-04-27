@@ -1426,6 +1426,53 @@ Output:
 
 <img width="183" height="59" alt="Screenshot 2026-04-27 235853" src="https://github.com/user-attachments/assets/d823e04c-07c1-454e-911e-9f198e1bd644" />
 
+# e
+                                                  Program-20
+
+public class Main {
+    public static void main(String[] args) {
+
+        try {
+            int arr[] = new int[5];
+
+            arr[0] = 10;
+            arr[1] = 20;
+            arr[2] = 30;
+            arr[3] = 40;
+            arr[4] = 50;
+
+            System.out.println("Accessing array elements:");
+            for (int i = 0; i <= 5; i++) {  
+                System.out.println("Element at index " + i + " = " + arr[i]);
+            }
+
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System. out.println("Array Index Out Of Bounds Exception caught!");
+            System. out.println("You tried to access an invalid index in the array.");
+        }
+
+        try {
+            int a = 10;
+            int b = 0;
+
+            int result = a / b;  
+            System.out.println("Result = " + result);
+
+        } catch (ArithmeticException e) {
+            System. out.println("Arithmetic Exception caught!");
+            System. out.println("Division by zero is not allowed.");
+        }
+
+        System.out.println("Program continues after handling exceptions.");
+    }
+}
+
+
+Output:
+
+<img width="586" height="299" alt="Screenshot 2026-04-28 000128" src="https://github.com/user-attachments/assets/af554a66-398b-4d87-97ee-9a24a83a7a27" />
+
+
 
 
 
