@@ -755,3 +755,62 @@ Output:
 <p><img width="574" height="274" alt="Screenshot 2026-04-27 220804" src="https://github.com/user-attachments/assets/974190f6-46d1-49d0-8251-f4aef8ee0f37" />
 
 </p>
+
+
+# o
+                                                  Program-12
+
+
+class ThreadTask1 extends Thread {
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("Thread 1: " + i);
+        }
+    }
+}
+
+class ThreadTask2 extends Thread {
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("Thread 2: " + i);
+        }
+    }
+}
+
+class ThreadTask3 extends Thread {
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("Thread 3: " + i);
+        }
+    }
+}
+
+public class JoinDemo {
+    public static void main(String[] args) {
+
+        ThreadTask1 t1 = new ThreadTask1();
+        ThreadTask2 t2 = new ThreadTask2();
+        ThreadTask3 t3 = new ThreadTask3();
+
+        try {
+            t1.start();
+            t1.join();   // wait until Thread 1 completes
+
+            t2.start();
+            t2.join();   // wait until Thread 2 completes
+
+            t3.start();
+            t3.join();   // wait until Thread 3 completes
+
+        } catch (InterruptedException e) {
+            System.out.println(e);
+        }
+
+        System.out.println("All threads completed execution.");
+    }
+}
+
+
+Output:
+
+<img width="362" height="635" alt="Screenshot 2026-04-27 221328" src="https://github.com/user-attachments/assets/0cfeef58-a5e5-46cb-8f48-a70c8cb433b0" />
