@@ -618,3 +618,140 @@ public class TestMatrix {
 Output:
 
 <img width="385" height="632" alt="Screenshot 2026-04-27 215353" src="https://github.com/user-attachments/assets/3c980b76-85cb-4936-8b14-f133d3211ede" />
+
+
+# n
+                                                  Program-11
+
+
+//Without Thread (Sequential Execution)
+class PrintTask1 {
+    void printNumbers() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("Class 1: " + i);
+        }
+    }
+}
+
+class PrintTask2 {
+    void printNumbers() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("Class 2: " + i);
+        }
+    }
+}
+
+class PrintTask3 {
+    void printNumbers() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("Class 3: " + i);
+        }
+    }
+}
+
+public class SequentialDemo {
+    public static void main(String[] args) {
+        PrintTask1 t1 = new PrintTask1();
+        PrintTask2 t2 = new PrintTask2();
+        PrintTask3 t3 = new PrintTask3();
+
+        t1.printNumbers();
+        t2.printNumbers();
+        t3.printNumbers();
+    }
+}
+
+//With Thread Class
+class ThreadTask1 extends Thread {
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("Thread 1: " + i);
+        }
+    }
+}
+
+class ThreadTask2 extends Thread {
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("Thread 2: " + i);
+        }
+    }
+}
+
+class ThreadTask3 extends Thread {
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("Thread 3: " + i);
+        }
+    }
+}
+
+public class ThreadDemo {
+    public static void main(String[] args) {
+        ThreadTask1 t1 = new ThreadTask1();
+        ThreadTask2 t2 = new ThreadTask2();
+        ThreadTask3 t3 = new ThreadTask3();
+
+        t1.start();
+        t2.start();
+        t3.start();
+    }
+}
+
+//Using Runnable Interface
+class RunnableTask1 implements Runnable {
+    @Override
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("Runnable 1: " + i);
+        }
+    }
+}
+
+class RunnableTask2 implements Runnable {
+    @Override
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("Runnable 2: " + i);
+        }
+    }
+}
+
+class RunnableTask3 implements Runnable {
+    @Override
+    public void run() {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println("Runnable 3: " + i);
+        }
+    }
+}
+
+public class RunnableDemo {
+    public static void main(String[] args) {
+
+        Thread t1 = new Thread(new RunnableTask1());
+        Thread t2 = new Thread(new RunnableTask2());
+        Thread t3 = new Thread(new RunnableTask3());
+
+        t1.start();
+        t2.start();
+        t3.start();
+    }
+}
+
+
+Output:
+
+<p>
+<img width="376" height="427" alt="Screenshot 2026-04-27 220459" src="https://github.com/user-attachments/assets/99777f3f-2c8b-4992-9829-1d50ad3444bd" />
+
+</p>
+
+<p>
+<img width="571" height="359" alt="Screenshot 2026-04-27 220625" src="https://github.com/user-attachments/assets/20816ca7-ac7a-4b4e-b2bf-ad80fbcfd863" />
+>
+</p>
+
+<p><img width="574" height="274" alt="Screenshot 2026-04-27 220804" src="https://github.com/user-attachments/assets/974190f6-46d1-49d0-8251-f4aef8ee0f37" />
+
+</p>
