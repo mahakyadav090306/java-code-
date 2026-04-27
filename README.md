@@ -1388,6 +1388,46 @@ Output:
 <img width="285" height="144" alt="Screenshot 2026-04-27 235615" src="https://github.com/user-attachments/assets/ddc3f670-83b7-4864-a4ec-fa7869433da9" />
 
 
+# w
+                                                  Program-19
+
+package mypack;
+
+public class Add {
+    public int sum(int a, int b) {
+        return a + b;
+    }
+}
+package mypack.subpack;
+
+public class Square {
+    public int square(int a) {
+        return a * a;
+    }
+}
+import mypack.Add;
+import mypack.subpack.Square;
+
+//Main
+
+public class Main {
+    public static void main(String[] args) {
+
+        Add a = new Add();
+        Square s = new Square();
+
+        System.out.println("Addition: " + a.sum(10, 5));
+        System.out.println("Square: " + s.square(5));
+    }
+}
+
+
+Output:
+
+<img width="183" height="59" alt="Screenshot 2026-04-27 235853" src="https://github.com/user-attachments/assets/d823e04c-07c1-454e-911e-9f198e1bd644" />
+
+
+
 
 
 
