@@ -1182,6 +1182,131 @@ Output:
 
 <img width="679" height="487" alt="Screenshot 2026-04-27 231037" src="https://github.com/user-attachments/assets/dd2ba925-94af-40bc-a02d-b6b7962fbebd" />
 
+# t
+                                                  Program-17
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.ArrayList;
+
+public class PaintBrush extends JFrame {
+
+    private Color currentColor = Color.BLACK;
+    private int brushSize = 5;
+
+    public PaintBrush() {
+        setTitle("Smooth Paint Brush");
+        setSize(900, 600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new BorderLayout());
+
+        DrawArea drawArea = new DrawArea();
+        add(drawArea, BorderLayout.CENTER);
+
+        // Controls
+        JPanel controls = new JPanel();
+
+        JButton black = new JButton("Black");
+        JButton red = new JButton("Red");
+        JButton blue = new JButton("Blue");
+        JButton green = new JButton("Green");
+
+        black.addActionListener(e -> currentColor = Color.BLACK);
+        red.addActionListener(e -> currentColor = Color.RED);
+        blue.addActionListener(e -> currentColor = Color.BLUE);
+        green.addActionListener(e -> currentColor = Color.GREEN);
+
+        controls.add(black);
+        controls.add(red);
+        controls.add(blue);
+        controls.add(green);
+
+        JLabel label = new JLabel("Brush Size:");
+        JSlider slider = new JSlider(1, 30, 5);
+
+        slider.addChangeListener(e -> brushSize = slider.getValue());
+
+        controls.add(label);
+        controls.add(slider);
+
+        add(controls, BorderLayout.SOUTH);
+
+        setVisible(true);
+    }
+
+    // Line structure
+    class Line {
+        int x1, y1, x2, y2;
+        Color color;
+        int size;
+
+        Line(int x1, int y1, int x2, int y2, Color color, int size) {
+            this.x1 = x1;
+            this.y1 = y1;
+            this.x2 = x2;
+            this.y2 = y2;
+            this.color = color;
+            this.size = size;
+        }
+    }
+
+    class DrawArea extends JPanel {
+
+        private java.util.List<Line> lines = new ArrayList<>();
+        private int lastX, lastY;
+
+        public DrawArea() {
+            setBackground(Color.WHITE);
+
+            addMouseListener(new MouseAdapter() {
+                public void mousePressed(MouseEvent e) {
+                    lastX = e.getX();
+                    lastY = e.getY();
+                }
+            });
+
+            addMouseMotionListener(new MouseMotionAdapter() {
+                public void mouseDragged(MouseEvent e) {
+
+                    int x = e.getX();
+                    int y = e.getY();
+
+                    lines.add(new Line(lastX, lastY, x, y, currentColor, brushSize));
+
+                    lastX = x;
+                    lastY = y;
+
+                    repaint();
+                }
+            });
+        }
+
+        @Override
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+
+            Graphics2D g2 = (Graphics2D) g;
+
+            for (Line line : lines) {
+                g2.setColor(line.color);
+                g2.setStroke(new BasicStroke(line.size, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
+                g2.drawLine(line.x1, line.y1, line.x2, line.y2);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        new PaintBrush();
+    }
+}
+
+
+Output:
+
+<img width="631" height="527" alt="Screenshot 2026-04-27 232147" src="https://github.com/user-attachments/assets/fc404903-acb3-4b10-84c4-f04deef50cf3" />
+
+
 
 
 
