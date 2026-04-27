@@ -957,4 +957,107 @@ public class SwingCalculator {
 Output:
 <img width="163" height="37" alt="Screenshot 2026-04-27 224625" src="https://github.com/user-attachments/assets/32e49024-8272-4328-8b98-1c2caae9996e" />
 
+# r
+                                                  Program-15
+
+import javax.swing.*;
+import java.awt.event.*;
+
+class MatrixAddFrame extends JFrame {
+
+    JTextField a11, a12, a21, a22;
+    JTextField b11, b12, b21, b22;
+    JLabel result;
+
+    MatrixAddFrame() {
+
+        setTitle("Matrix Addition");
+        setSize(500, 400);
+        setLayout(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        a11 = new JTextField();
+        a12 = new JTextField();
+        a21 = new JTextField();
+        a22 = new JTextField();
+
+        b11 = new JTextField();
+        b12 = new JTextField();
+        b21 = new JTextField();
+        b22 = new JTextField();
+
+        JLabel l1 = new JLabel("Matrix A");
+        l1.setBounds(50, 20, 100, 25);
+
+        JLabel l2 = new JLabel("Matrix B");
+        l2.setBounds(250, 20, 100, 25);
+
+        a11.setBounds(50, 50, 50, 25);
+        a12.setBounds(110, 50, 50, 25);
+        a21.setBounds(50, 80, 50, 25);
+        a22.setBounds(110, 80, 50, 25);
+
+        b11.setBounds(250, 50, 50, 25);
+        b12.setBounds(310, 50, 50, 25);
+        b21.setBounds(250, 80, 50, 25);
+        b22.setBounds(310, 80, 50, 25);
+
+        JButton addBtn = new JButton("Add");
+        addBtn.setBounds(180, 130, 100, 30);
+
+        result = new JLabel("Result:");
+        result.setBounds(50, 200, 400, 30);
+
+        addBtn.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+
+                int A[][] = new int[2][2];
+                int B[][] = new int[2][2];
+                int C[][] = new int[2][2];
+
+                A[0][0] = Integer.parseInt(a11.getText());
+                A[0][1] = Integer.parseInt(a12.getText());
+                A[1][0] = Integer.parseInt(a21.getText());
+                A[1][1] = Integer.parseInt(a22.getText());
+
+                B[0][0] = Integer.parseInt(b11.getText());
+                B[0][1] = Integer.parseInt(b12.getText());
+                B[1][0] = Integer.parseInt(b21.getText());
+                B[1][1] = Integer.parseInt(b22.getText());
+
+                for (int i = 0; i < 2; i++) {
+                    for (int j = 0; j < 2; j++) {
+                        C[i][j] = A[i][j] + B[i][j];
+                    }
+                }
+
+                result.setText("Result: [" + C[0][0] + " " + C[0][1] + "] [" + C[1][0] + " " + C[1][1] + "]");
+            }
+        });
+
+        add(l1);
+        add(l2);
+
+        add(a11); add(a12); add(a21); add(a22);
+        add(b11); add(b12); add(b21); add(b22);
+
+        add(addBtn);
+        add(result);
+
+        setVisible(true);
+    }
+}
+
+public class MatrixAdditionSwing {
+    public static void main(String[] args) {
+        new MatrixAddFrame();
+    }
+}
+
+
+Output:
+
+<img width="249" height="37" alt="Screenshot 2026-04-27 225232" src="https://github.com/user-attachments/assets/3b575217-f508-47fd-bbff-aad6fd786157" />
+
+
 
